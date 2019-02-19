@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+  <title>Photos 2</title>
+  <link rel="stylesheet" href="photos.css"></link>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="photos.js"></script>
+</head>
+<body>
+  <div id="app">
+      <div id="header">
+         <img id="logo" src="media/logo.jpg">
+        Next Citybreak
+        <nav class="mainmenu">
+          <a href="index.html" target="_self">Home</a>
+          <a href="t&t.html" target="_self"> Tips&Tricks</a>
+          <a href="photos.html" target="_self">Photos</a>
+           <span class="container">Countries<br>
+             <a href="photos.html" target="_self">Greece</a>
+             <a href="photos.html" target="_self">Belgium</a>
+             <a href="photos.html" target="_self">Poland</a>
+             <a href="photos2.html" target="_self">Italy</a>
+             <a href="photos2.html" target="_self">Crotia</a>
+             <a href="photos2.html" target="_self">France</a>
+             <a href="photos3.html" target="_self">Monaco</a>
+             <a href="photos3.html" target="_self">Austria</a>
+             <a href="photos3.html" target="_self">Romania</a>
+           </span>
+         </nav>
+       </div>
+       <div id="content">
+         <div > <img id="mg" src="media/img1.jpg"></div>
+         <div id="info">
+           <table>
+              <tbody>
+                <tr v-for="(el,id) in countries">
+                  <td><img :src="el.it" alt="Italy"></td>
+                  <td><img :src="el.hr" alt="Croatia"></td>
+                  <td><img :src="el.fr" alt="France"></td>
+                  <td><button v-on:click="edit(id)">Edit</button><br> <br><button v-on:click="remove(id)">Delete</button></td>
+                </tr>
+              </tbody>
+              </table>
+              <div> <h4> Give a valid image adress!!!</h4></div>
+              <div id="input">
+              <label>Greece: <input v-model="input.gr" /></label><br />
+              <label>Belgium: <input v-model="input.be" /></label><br />
+              <label>Poland: <input v-model="input.pl" /></label><br />
+              <label>Italy: <input v-model="input.it" /></label><br />
+              <label>Croatia: <input v-model="input.hr" /></label><br />
+              <label>France: <input v-model="input.fr" /></label><br />
+              <label>Monaco: <input v-model="input.mnc" /></label><br />
+              <label>Austria: <input v-model="input.at" /></label><br />
+              <label>Romania: <input v-model="input.ro" /></label><br />
+              </div>
+              <a id="next" href="photos3.html" target="_self">NEXT</a>
+              <a id="next" href="photos.html" target="_self">PREV</a>
+              <button v-on:click="commit">Add/Edit</button>
+         </div>
+     </div>
+   </div>
+</body>
+<html>

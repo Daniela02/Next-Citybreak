@@ -1,0 +1,153 @@
+body {
+  font-family:  Courier New;
+  margin: 0;
+  color:white;
+}
+
+#app {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 10% auto;
+  grid-template-rows: 105px auto;
+  grid-template-areas:
+    "header header"
+    "content content"
+}
+
+#header {
+  grid-area: header;
+  background-color:  #00001a;
+  font-family: Courier New;
+  color: white;
+  font-weight: bold;
+  padding: 1.5%;
+  font-size:30px;
+}
+
+.container a {
+  display:none;
+  visibility:hidden;
+}
+.container:hover a {
+  display:block;
+  color:black;
+  visibility:visible;
+  transform: scaleZ(3);
+}
+nav.mainmenu {
+  display: grid;
+  grid-template-columns: 50px 125px 110px 75px auto;
+  grid-template-rows: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav.mainmenu a , span {
+  text-decoration: none;
+  color: white;
+  padding:5px;
+  font-size: 18px;
+  justify-self:center;
+}
+
+nav.mainmenu a:hover, span:hover {
+  background-color:#F6AE2D;
+  color:black;
+  transform: scaleZ(3);
+}
+
+#content {
+  grid-area: content;
+  padding: 10px;
+}
+
+#content{
+  display:grid;
+  grid-template-columns: 10% auto;
+  grid-template-rows: auto;
+  background-image:linear-gradient(#00001a, #F6AE2D);
+  }
+#info
+{
+
+  color: white;
+  padding: 2%;
+  font-size: 17px;
+}
+#mg
+{
+  width:90%;
+  height:auto;
+  position:sticky;
+  top:0;
+}
+#logo
+{
+  float:right;
+  width:65px;
+  height:52px;
+  padding: 2%;
+}
+#info input
+{
+  color:#00001a;
+}
+th
+{
+  font-size:1.8vw;
+  justify-self: center;
+  padding: 1%;
+  color: white;
+  font-family:  Courier New;
+}
+td img
+{
+  padding: 1%;
+  width:300px;
+  height:200px;
+}
+button
+{
+  border-radius: 25px;
+  border-color: #00001a;
+  padding: 10px;
+  background-color: #00001a;
+  color:#F6AE2D;
+  font-weight: bolder;
+  text-decoration: none;
+}
+button:hover
+{
+ background-color: #F6AE2D;
+ color:black;
+}
+td button
+{
+  margin-left: 40%;
+  text-decoration: none;
+}
+td{
+  padding: 1%;
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+#next
+{
+  float:right;
+  border-radius: 25px;
+  background-color: #00001a;
+  font-weight: bolder;
+  font-size: 17px;
+  color:#F6AE2D;
+  padding: 10px;
+  text-decoration: none;
+}
+#next:hover
+{
+  background-color: #F6AE2D;
+  color:black;
+}
+tbody{
+  display: flex;
+  flex-wrap: wrap;
+}
